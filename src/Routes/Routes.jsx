@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../Main/Main";
+import Main from "../Layouts/Main/Main";
 import Error from "../Pages/Error/Error";
 
 

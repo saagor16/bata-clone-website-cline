@@ -1,11 +1,10 @@
 
-const Main = () => {
+const Footer = () => {
     return (
         <div>
-            
             
         </div>
     );
 };
 
-export default Main;
+export default Footer;
