@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegHeart, FaSearch, FaShoppingCart, FaUserAlt, FaWhatsappSquare } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -8,7 +8,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [isSticky, setIsSticky] = useState(false);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
@@ -22,6 +22,21 @@ const Navbar = () => {
   const handleMenuClick = () => {
     setMenuOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) { // Adjust this value as needed
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navLinks = (
     <>
@@ -118,7 +133,7 @@ const Navbar = () => {
       </div>
 
       {/* second navbar for lg devices */}
-      <div className="hidden lg:flex justify-center p-5 bg-gray-200">
+      <div className={`hidden lg:flex justify-center p-5 bg-gray-200 ${isSticky ? 'fixed top-0 left-0 right-0 z-50 shadow-lg' : ''}`}>
         <div className="flex gap-10">
           {navLinks}
         </div>
