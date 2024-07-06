@@ -88,7 +88,7 @@ const Navbar = () => {
       </div>
 
       {/* mobile navbar */}
-      <div className={`lg:hidden flex justify-between items-center p-5 md:pl-14 md:pr-14 ${isSticky ? 'fixed top-0 left-0 right-0 z-50 bg-white shadow-lg' : ''}`}>
+      <div className={`lg:hidden fixed top-0 left-0 right-0 z-20 flex justify-between items-center p-5 md:pl-14 md:pr-14 bg-white ${isSticky ? 'shadow-md' : ''}`}>
         <div className="flex items-center gap-5">
           <FiMenu className="text-lg cursor-pointer" onClick={handleMenuClick} />
           <FaSearch className="text-lg cursor-pointer" onClick={handleSearchClick} />
@@ -102,7 +102,7 @@ const Navbar = () => {
 
       {/* Search field for mobile */}
       {searchOpen && (
-        <div className="lg:hidden px-5">
+        <div className="lg:hidden px-5 mt-16">
           <input
             type="text"
             placeholder="Search..."
@@ -133,9 +133,15 @@ const Navbar = () => {
       </div>
 
       {/* second navbar for lg devices */}
-      <div className={`hidden lg:flex justify-center p-5 bg-gray-200 ${isSticky ? 'fixed top-0 left-0 right-0 z-50 shadow-lg' : ''}`}>
-        <div className="flex gap-10">
+      <div className={`hidden lg:flex justify-center p-5 bg-gray-200 ${isSticky ? 'fixed top-0 left-0 right-0 z-50 shadow-lg bg-white' : ''}`}>
+        <div className="flex gap-10 items-center">
           {navLinks}
+          {isSticky && (
+            <div className="flex items-center gap-3">
+              <FaSearch className="text-lg cursor-pointer" />
+              <FaShoppingCart className="text-lg cursor-pointer" />
+            </div>
+          )}
         </div>
       </div>
     </div>
