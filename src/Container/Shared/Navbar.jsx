@@ -9,6 +9,7 @@ const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+
   const handleLinkClick = (link) => {
     setActiveLink(link);
     setMenuOpen(false); // Close the menu when a link is clicked
@@ -51,9 +52,9 @@ const Navbar = () => {
   );
 
   return (
-    <div className="container mx-auto">
+    <div className="">
       {/* lg navbar */}
-      <div className="hidden lg:flex justify-between items-center p-5">
+      <div className="hidden lg:flex justify-between items-center p-5 pr-24 pl-24">
         <div className="flex items-center gap-3 text-sm">
           <CiLocationOn className="text-lg" />
           <p>FIND A STORE | CUSTOMER CARE: 09666200300</p>
@@ -72,7 +73,7 @@ const Navbar = () => {
       </div>
 
       {/* mobile navbar */}
-      <div className="lg:hidden flex justify-between items-center p-5">
+      <div className="lg:hidden flex justify-between items-center p-5 md:pl-14 md:pr-14">
         <div className="flex items-center gap-5">
           <FiMenu className="text-lg cursor-pointer" onClick={handleMenuClick} />
           <FaSearch className="text-lg cursor-pointer" onClick={handleSearchClick} />
