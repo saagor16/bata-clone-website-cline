@@ -88,7 +88,7 @@ const Navbar = () => {
       </div>
 
       {/* mobile navbar */}
-      <div className="lg:hidden flex justify-between items-center p-5 md:pl-14 md:pr-14">
+      <div className={`lg:hidden flex justify-between items-center p-5 md:pl-14 md:pr-14 ${isSticky ? 'fixed top-0 left-0 right-0 z-50 bg-white shadow-lg' : ''}`}>
         <div className="flex items-center gap-5">
           <FiMenu className="text-lg cursor-pointer" onClick={handleMenuClick} />
           <FaSearch className="text-lg cursor-pointer" onClick={handleSearchClick} />
