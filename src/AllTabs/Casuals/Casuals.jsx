@@ -7,21 +7,21 @@ const Casuals = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -71,12 +71,18 @@ const Casuals = () => {
         {products.map((product) => (
           <div key={product.id} className="p-4">
             <div className="border rounded-lg shadow-md">
-              <img src={product.image} alt={product.name} className="w-full h-40 object-cover" />
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-40 object-cover"
+              />
               <div className="mt-4 p-2">
                 <div className="text-sm text-gray-500">{product.brand}</div>
                 <div className="font-bold text-lg">{product.name}</div>
                 <div className="mt-2 text-xl font-semibold">Tk {product.price}.00</div>
-                <button className="mt-4 bg-black text-white px-4 py-2 rounded">SHOP NOW</button>
+                <button className="mt-4 bg-black text-white px-4 py-2 rounded">
+                  SHOP NOW
+                </button>
               </div>
             </div>
           </div>
