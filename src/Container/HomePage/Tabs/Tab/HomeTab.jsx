@@ -27,13 +27,13 @@ const HomeTab = () => {
                     <Casuals></Casuals>
                 </TabPanel>
                 <TabPanel>
-                    <h2></h2>
+                <Casuals></Casuals>
                 </TabPanel>
                 <TabPanel>
                     <Casuals></Casuals>
                 </TabPanel>
                 <TabPanel>
-                    <h2></h2>
+                <Casuals></Casuals>
                 </TabPanel>
             </div>
         </Tabs>
