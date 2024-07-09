@@ -24,7 +24,7 @@ const HomeTab = () => {
                     <Sneakers></Sneakers>
                 </TabPanel>
                 <TabPanel>
-                    <h2></h2>
+                    <Casuals></Casuals>
                 </TabPanel>
                 <TabPanel>
                     <h2></h2>
