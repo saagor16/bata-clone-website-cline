@@ -24,16 +24,16 @@ const HomeTab = () => {
                     <Sneakers></Sneakers>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Sandals content</h2>
+                    <h2></h2>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Ladies Flats content</h2>
+                    <h2></h2>
                 </TabPanel>
                 <TabPanel>
                     <Casuals></Casuals>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Accessories content</h2>
+                    <h2></h2>
                 </TabPanel>
             </div>
         </Tabs>
