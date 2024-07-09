@@ -1,6 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Casuals from '../../../../AllTabs/Casuals/Casuals';
+import Sneakers from '../../../../AllTabs/Sneakers/Sneakers';
 
 const HomeTab = () => {
     return (
@@ -20,7 +21,7 @@ const HomeTab = () => {
                     <Casuals />
                 </TabPanel>
                 <TabPanel>
-                    <h2>Sneakers content</h2>
+                    <Sneakers></Sneakers>
                 </TabPanel>
                 <TabPanel>
                     <h2>Sandals content</h2>
@@ -29,7 +30,7 @@ const HomeTab = () => {
                     <h2>Ladies Flats content</h2>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Formals content</h2>
+                    <Casuals></Casuals>
                 </TabPanel>
                 <TabPanel>
                     <h2>Accessories content</h2>
