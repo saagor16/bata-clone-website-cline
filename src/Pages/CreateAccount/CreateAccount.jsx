@@ -1,8 +1,8 @@
 
 const CreateAccount = () => {
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-md rounded-md">
+        <div className="flex justify-center items-center min-h-screen bg-gray-100 mt-16">
+            <div className="w-full max-w-lg p-8 space-y-6  rounded-md">
                 <h2 className="text-center text-2xl font-bold">REGISTRATION</h2>
                 <p className="text-center text-sm text-gray-600">
                     Do you like Bata? You will love Bata Club! Register now! Only for members, there are discount coupons, exclusive previews and many other advantages.
