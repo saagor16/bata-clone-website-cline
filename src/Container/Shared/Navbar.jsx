@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
         <div className="text-lg font-bold">Logo</div>
         <div className="flex items-center gap-5">
-          <FaUserAlt className="text-lg" />
+        <Link to='/login'><FaUserAlt className="text-lg" /></Link>
           <FaRegHeart className="text-lg" />
           <FaWhatsappSquare className="text-lg" />
           <FaShoppingCart className="text-lg" />
@@ -95,7 +95,7 @@ const Navbar = () => {
         </div>
         <div className="text-lg font-bold">Logo</div>
         <div className="flex items-center gap-5">
-          <FaUserAlt className="text-lg" />
+          <Link to='/login'><FaUserAlt className="text-lg" /></Link>
           <FaShoppingCart className="text-lg" />
         </div>
       </div>
@@ -125,7 +125,7 @@ const Navbar = () => {
               <p>My Wishlists</p>
             </div>
             <div className="flex items-center gap-3">
-              <FaUserAlt className="text-lg" />
+            <Link to='/login'><FaUserAlt className="text-lg" /></Link>
               <p>Find A Store | Customer care: 09666200300</p>
             </div>
           </div>
