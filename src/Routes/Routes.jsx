@@ -3,6 +3,7 @@ import Main from "../Layouts/Main/Main";
 import Error from "../Pages/Error/Error";
 import Home from "../Container/HomePage/Home/Home";
 import Login from "../Pages/Login/Login";
+import CreateAccount from "../Pages/CreateAccount/CreateAccount";
 
 
 export const router = createBrowserRouter([
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
         {
           path: "/login",
           element:<Login></Login>,
+        },
+        {
+          path: "/create",
+          element:<CreateAccount></CreateAccount>,
         },
     ]
     },

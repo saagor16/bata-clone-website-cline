@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
@@ -34,7 +35,7 @@ const Login = () => {
                     <li>✓ Earn 1 Point with every BDT 100 purchase</li>
                     <li>✓ Bonus points after every even number purchase worth BDT 100+</li>
                 </ul>
-                <a href="#" className="block text-center bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">CREATE A BATA ACCOUNT</a>
+                <Link to='/create' className="block text-center bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">CREATE A BATA ACCOUNT</Link>
             </div>
         </div>
     );
