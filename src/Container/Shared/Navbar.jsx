@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { CiLocationOn } from "react-icons/ci";
-import { FaRegHeart, FaSearch, FaShoppingCart, FaUserAlt, FaWhatsappSquare } from "react-icons/fa";
+import {
+  FaRegHeart,
+  FaSearch,
+  FaShoppingCart,
+  FaUserAlt,
+  FaWhatsappSquare,
+} from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
@@ -25,7 +31,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) { // Adjust this value as needed
+      if (window.scrollY > 100) {
+        // Adjust this value as needed
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -49,7 +56,11 @@ const Navbar = () => {
         { to: "/accessories", text: "ACCESSORIES", key: "accessories" },
         { to: "/bata-club", text: "BATA CLUB", key: "bataClub" },
         { to: "/b-mag", text: "B-MAG", key: "bMag" },
-        { to: "/bata-industrials", text: "BATA INDUSTRIALS", key: "bataIndustrials" },
+        {
+          to: "/bata-industrials",
+          text: "BATA INDUSTRIALS",
+          key: "bataIndustrials",
+        },
       ].map((link) => (
         <Link
           key={link.key}
@@ -76,7 +87,9 @@ const Navbar = () => {
         </div>
         <div className="text-lg font-bold">Logo</div>
         <div className="flex items-center gap-5">
-        <Link to='/login'><FaUserAlt className="text-lg" /></Link>
+          <Link to="/login">
+            <FaUserAlt className="text-lg" />
+          </Link>
           <FaRegHeart className="text-lg" />
           <FaWhatsappSquare className="text-lg" />
           <FaShoppingCart className="text-lg" />
@@ -88,14 +101,26 @@ const Navbar = () => {
       </div>
 
       {/* mobile navbar */}
-      <div className={`lg:hidden fixed top-0 left-0 right-0 z-20 flex justify-between items-center p-5 md:pl-14 md:pr-14 bg-white ${isSticky ? 'shadow-md' : ''}`}>
+      <div
+        className={`lg:hidden fixed top-0 left-0 right-0 z-20 flex justify-between items-center p-5 md:pl-14 md:pr-14 bg-white ${
+          isSticky ? "shadow-md" : ""
+        }`}
+      >
         <div className="flex items-center gap-5">
-          <FiMenu className="text-lg cursor-pointer" onClick={handleMenuClick} />
-          <FaSearch className="text-lg cursor-pointer" onClick={handleSearchClick} />
+          <FiMenu
+            className="text-lg cursor-pointer"
+            onClick={handleMenuClick}
+          />
+          <FaSearch
+            className="text-lg cursor-pointer"
+            onClick={handleSearchClick}
+          />
         </div>
         <div className="text-lg font-bold">Logo</div>
         <div className="flex items-center gap-5">
-          <Link to='/login'><FaUserAlt className="text-lg" /></Link>
+          <Link to="/login">
+            <FaUserAlt className="text-lg" />
+          </Link>
           <FaShoppingCart className="text-lg" />
         </div>
       </div>
@@ -112,8 +137,18 @@ const Navbar = () => {
       )}
 
       {/* Off-canvas menu */}
-      <div className={`fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-        <div className={`fixed left-0 top-0 bottom-0 w-3/4 max-w-sm bg-white p-5 transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform`}>
+      <div
+        className={`fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity ${
+          menuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div
+          className={`fixed left-0 top-0 bottom-0 w-3/4 max-w-sm bg-white p-5 transform ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform`}
+        >
           <div className="flex justify-between items-center mb-5">
             <div className="text-lg font-bold">Logo</div>
             <FiX className="text-lg cursor-pointer" onClick={handleMenuClick} />
@@ -125,7 +160,9 @@ const Navbar = () => {
               <p>My Wishlists</p>
             </div>
             <div className="flex items-center gap-3">
-            <Link to='/login'><FaUserAlt className="text-lg" /></Link>
+              <Link to="/login">
+                <FaUserAlt className="text-lg" />
+              </Link>
               <p>Find A Store | Customer care: 09666200300</p>
             </div>
           </div>
@@ -133,7 +170,11 @@ const Navbar = () => {
       </div>
 
       {/* second navbar for lg devices */}
-      <div className={`hidden lg:flex justify-center p-5 bg-gray-200 ${isSticky ? 'fixed top-0 left-0 right-0 z-50 shadow-lg bg-white' : ''}`}>
+      <div
+        className={`hidden lg:flex justify-center p-5 bg-gray-200 ${
+          isSticky ? "fixed top-0 left-0 right-0 z-50 shadow-lg bg-white" : ""
+        }`}
+      >
         <div className="flex gap-10 items-center">
           {navLinks}
           {isSticky && (
