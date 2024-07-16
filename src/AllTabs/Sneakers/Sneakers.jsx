@@ -1,10 +1,5 @@
-
 const Sneakers = () => {
-    return (
-        <div>
-            Sneakers
-        </div>
-    );
+  return <div>Sneakers</div>;
 };
 
 export default Sneakers;

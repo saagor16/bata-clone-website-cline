@@ -65,8 +65,6 @@ const Casuals = () => {
     },
   ];
 
-
-
   return (
     <div className="px-4 py-8">
       <Slider {...settings}>
@@ -81,7 +79,9 @@ const Casuals = () => {
               <div className="mt-4 p-2">
                 <div className="text-sm text-gray-500">{product.brand}</div>
                 <div className="font-bold text-lg">{product.name}</div>
-                <div className="mt-2 text-xl font-semibold">Tk {product.price}.00</div>
+                <div className="mt-2 text-xl font-semibold">
+                  Tk {product.price}.00
+                </div>
                 <button className="mt-4 bg-black text-white px-4 py-2 rounded">
                   SHOP NOW
                 </button>
